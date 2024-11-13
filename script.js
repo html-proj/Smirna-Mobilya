@@ -8,6 +8,7 @@ window.onscroll = function() {
         backToTopButton.style.display = "none"; // Butonu gizle
     }
 };
+
 // Resimlere tıklama olayı
 const galleryItems = document.querySelectorAll('.product-image');
 const lightbox = document.getElementById('lightbox');
@@ -56,11 +57,8 @@ lightbox.addEventListener('click', (e) => {
     }
 });
 
-
-
 // Butona tıklandığında sayfayı yukarı kaydır
 backToTopButton.onclick = function() {
     document.body.scrollTop = 0; // Safari
     document.documentElement.scrollTop = 0; // Diğer tarayıcılar
 };
-

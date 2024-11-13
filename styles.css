@@ -134,7 +134,7 @@ nav ul li {
 }
 /* Menü bağlantıları */
 nav ul li a {
-    margin-left: 10%;
+    margin-left: 10;
     color: #fff;  /* Yazı rengi beyaz */
     text-decoration: none;  /* Alt çizgiyi kaldırır */
     font-size: 18px;  /* Yazı boyutu */
@@ -776,5 +776,60 @@ img {
     .button {
         width: 100%;  /* Butonları %100 genişlikte yapar */
         padding: 10px 20px;
+    }
+}
+/* Mobil Ekranlar için Stil Eklemeleri (768px ve altı) */
+
+@media (max-width: 768px) {
+    /* Header düzenini dikey yapalım */
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    /* Menü öğelerini dikey sıralayalım */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Logo boyutunu küçültelim */
+    .logo-letter {
+        font-size: 50px;
+    }
+
+    /* Ürün galerisi düzeni */
+    .gallery {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .product {
+        width: 100%;
+    }
+}
+
+/* 480px ve altı telefonlar için ekstra düzenlemeler */
+@media (max-width: 480px) {
+    /* Header padding'i küçültelim */
+    header {
+        padding: 10px;
+    }
+
+    /* Menü öğelerini merkezleyelim */
+    nav ul {
+        text-align: center;
+    }
+
+    /* Logo daha da küçülecek */
+    .logo-letter {
+        font-size: 40px;
+    }
+
+    /* Ürün boyutunu daha da genişletelim */
+    .product {
+        width: 100%;
+        padding: 10px;
     }
 }
