@@ -836,3 +836,31 @@ img {
         padding: 10px;
     }
 }
+/* Mobil Ekranlar için Stil Eklemeleri (768px ve altı) */
+@media (max-width: 768px) {
+    /* Yazıları küçült */
+    h1, h2, h3, p {
+        font-size: 14px; /* Yazı boyutlarını küçültüyoruz */
+    }
+
+    /* Butonları küçült */
+    button {
+        font-size: 14px; /* Buton yazı boyutunu küçültüyoruz */
+        padding: 8px 12px; /* Buton padding'ini küçültüyoruz */
+    }
+}
+
+/* 480px ve altı telefonlar için ekstra düzenlemeler */
+@media (max-width: 480px) {
+    /* Yazı boyutunu daha da küçült */
+    h1, h2, h3, p {
+        font-size: 12px; /* Daha küçük yazı boyutu */
+    }
+
+    /* Butonları daha da küçült */
+    button {
+        font-size: 12px; /* Buton yazı boyutunu küçültüyoruz */
+        padding: 6px 10px; /* Buton padding'ini daha da küçültüyoruz */
+    }
+}
+
