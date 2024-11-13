@@ -11,7 +11,7 @@ h1{
 font-size: 2rem;
 }
 h4{
-    padding-top: 5rem;
+    padding-top: 7rem;
     margin-top: 5rem;
     text-align: center;
     font-size: 2rem;
@@ -419,13 +419,14 @@ footer p {
 }
 
 .text-container {
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     max-width: 1000px; /* Metin konteynerinin genişliği */
     line-height: 1.6; /* Metinler arasında boşluk ekler */
-    font-size: 1.2em;
+    font-size: 1rem;
     color: #333; /* Metin rengi */
     font-family: 'Arial', sans-serif; /* Yazı tipi */
 }
@@ -436,17 +437,17 @@ footer p {
 
 .kitchen-button {
     text-decoration: underline;
-    margin-left: -20px;
+    margin-left: -10px;
     padding-left: -10px;
     padding: 10px;
     background-color: #333;
     color: white;
-    font-size: 1em;
+    font-size: 0.8rem;
     border-radius: 5px;
     text-transform: uppercase;
     text-align: center;
     display: block;
-    max-width: 300px; /* Butonun genişliğini sınırlıyoruz */
+    max-width: 200px; /* Butonun genişliğini sınırlıyoruz */
     width: 100%; /* Butonun genişliği tam olarak belirlediğimiz alana uyar */
     transition: background-color 0.3s ease;
     margin-top: 20px; /* Buton ile yazı arasında boşluk ekler */
@@ -505,12 +506,13 @@ footer p {
 }
 
 .image1 {
-    margin-left: 1rem;
+    margin-left: 1.2rem;
     width: 50vw; /* Ekranın yarısı kadar genişlik */
     height: auto; /* Yükseklik oranını korur */
     max-height: 60%; /* Yüksekliği sınırlamak için */
     object-fit: contain; /* Resmi kutuya sığdırırken, boyutunun bozulmamasını sağlar */
 
+   
 }
 
 .text-container1 {
@@ -520,7 +522,7 @@ footer p {
     align-items: flex-start;
     max-width: 1000px; /* Metin konteynerinin genişliği */
     line-height: 1.6; /* Metinler arasında boşluk ekler */
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333; /* Metin rengi */
     font-family: 'Arial', sans-serif; /* Yazı tipi */
 }
@@ -533,12 +535,12 @@ footer p {
     padding: 20px;
     background-color: #333;
     color: white;
-    font-size: 1em;
+    font-size: 0.8rem;
     border-radius: 5px;
     text-transform: uppercase;
     text-align: center;
     display: block;
-    max-width: 300px; /* Butonun genişliğini sınırlıyoruz */
+    max-width: 200px; /* Butonun genişliğini sınırlıyoruz */
     width: 80%; /* Butonun genişliği tam olarak belirlediğimiz alana uyar */
     transition: background-color 0.3s ease;
     margin-top: 20px; /* Buton ile yazı arasında boşluk ekler */
@@ -548,6 +550,7 @@ footer p {
     background-color: #5a9; /* Hoverda arka plan rengini değiştirir */
 }
 .image-button-container2 {
+    padding-left: 1rem;
     display: flex;
     align-items: center; /* Resmi ve yazıyı dikeyde ortalar */
     justify-content: center; /* Resmi ve yazıyı yatayda ortalar */
@@ -558,8 +561,8 @@ footer p {
 }
 
 .image2 {
-    padding-left: 2rem;
-    margin-left: 2rem;
+    padding-left: 2.1rem;
+    margin-left: 2.1rem;
     width: 50vw; /* Ekranın yarısı kadar genişlik */
     height: auto; /* Yükseklik oranını korur */
     max-height: 60%; /* Yüksekliği sınırlamak için */
@@ -574,7 +577,7 @@ footer p {
     align-items: flex-start;
     max-width: 1000px; /* Metin konteynerinin genişliği */
     line-height: 1.6; /* Metinler arasında boşluk ekler */
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333; /* Metin rengi */
     font-family: 'Arial', sans-serif; /* Yazı tipi */
 }
@@ -587,12 +590,12 @@ footer p {
     padding: 20px;
     background-color: #333;
     color: white;
-    font-size: 1em;
+    font-size: 0.8rem;
     border-radius: 5px;
     text-transform: uppercase;
     text-align: center;
     display: block;
-    max-width: 300px; /* Butonun genişliğini sınırlıyoruz */
+    max-width: 200px; /* Butonun genişliğini sınırlıyoruz */
     width: 80%; /* Butonun genişliği tam olarak belirlediğimiz alana uyar */
     transition: background-color 0.3s ease;
     margin-top: 20px; /* Buton ile yazı arasında boşluk ekler */
