@@ -238,45 +238,38 @@ nav ul li a:hover {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
     }
 }
-
-/* Mobil cihazlar için yazı boyutunu küçültme */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px; /* Daha küçük yazı boyutu */
+/* Mobile yazı boyutunu daha da küçültüyoruz */
+@media (max-width: 768px) {
+    .moving-text {
+        font-size: 4vw; /* Mobilde yazıyı daha küçük yapıyoruz */
     }
 
-    h1 {
-        font-size: 2rem; /* Başlık boyutunu küçültme */
+    /* Mobile yazının taşmasını engellemek için hareket mesafesini ayarlıyoruz */
+    @keyframes moveText {
+        0% {
+            transform: translateX(-50%); /* Başlangıçta sola kayma mesafesini küçültüyoruz */
+        }
+        50% {
+            transform: translateX(0); /* Orta noktada kalır */
+        }
+        100% {
+            transform: translateX(50%); /* Sağda bitiş mesafesini küçültüyoruz */
+        }
     }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-}
-
-/* Daha küçük ekranlar için yazı boyutunu daha da küçültme */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 12px; /* Çok küçük ekranlar için yazı boyutu */
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
+    /* Mobil uyumlu */
+@media (max-width: 768px) {
+    .product {
+        width: 45%;
     }
 }
 
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
+
+}
 /* Ürünler Galerisi */
 .gallery {
     display: flex;
@@ -611,4 +604,106 @@ footer p {
 
 .kitchen-button2:hover {
     background-color: #5a9; /* Hoverda arka plan rengini değiştirir */
+}
+
+
+
+/* Menü için basit düzenlemeler */
+.navbar {
+    position: relative;
+    z-index: 1000; /* Menü her zaman ön planda olsun */
+    background-color: #333; /* Menü arka plan rengi */
+}
+
+.menu {
+    display: flex; /* Menü öğelerini yan yana yerleştirir */
+    justify-content: space-between; /* Menü öğeleri arasına boşluk bırakır */
+    padding: 10px 20px; /* Menüye iç boşluk ekler */
+}
+
+.menu-item {
+    color: white; /* Menü öğelerinin rengi */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #555; /* Hoverda arka plan rengini değiştir */
+}
+
+/* Menü gizlenmesi için kullanılan sınıf */
+.menu-hidden {
+    display: none; /* Menü öğelerini gizler */
+}
+
+/* Mobilde menü için düzenleme */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Menü öğelerini alt alta sıralar */
+        align-items: center;
+    }
+
+    .menu-item {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-hidden {
+        display: block; /* Menüyü mobilde göstermek için */
+    }
+}
+/* Varsayılan yazı boyutları */
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Başlık boyutu */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Mobil cihazlar için yazı boyutunu ayarlama */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Yazıyı biraz küçültüyoruz */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Çok küçük ekranlar için yazı boyutunu daha da küçültme */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px; /* Çok küçük ekranlar için yazı boyutu */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
 }

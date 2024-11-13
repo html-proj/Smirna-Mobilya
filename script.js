@@ -64,3 +64,12 @@ backToTopButton.onclick = function() {
     document.documentElement.scrollTop = 0; // Diğer tarayıcılar
 };
 
+// Menü açma/kapama işlevselliği
+const menuButton = document.getElementById('menu-button');
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', () => {
+    // Menü görünürlüğünü toggle yapıyoruz
+    menu.classList.toggle('menu-hidden');
+});
+
