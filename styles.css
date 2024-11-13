@@ -7,9 +7,12 @@ body {
     color: #333;
 }
 h1{
+    
 font-size: 2rem;
 }
 h4{
+    padding-top: 5rem;
+    margin-top: 5rem;
     text-align: center;
     font-size: 2rem;
 }
@@ -131,10 +134,11 @@ nav ul li {
 }
 /* Menü bağlantıları */
 nav ul li a {
+    margin-left: 10%;
     color: #fff;  /* Yazı rengi beyaz */
     text-decoration: none;  /* Alt çizgiyi kaldırır */
     font-size: 18px;  /* Yazı boyutu */
-    padding: 10px 20px;  /* Bağlantılar etrafında boşluk */
+    padding: 10px;  /* Bağlantılar etrafında boşluk */
     border-radius: 5px;  /* Yuvarlatılmış köşeler */
     position: relative;  /* Işıklı kenarın doğru konumlanabilmesi için gerekli */
     transition: all 0.3s ease;  /* Hover animasyonu */
@@ -238,38 +242,22 @@ nav ul li a:hover {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
     }
 }
-/* Mobile yazı boyutunu daha da küçültüyoruz */
-@media (max-width: 768px) {
-    .moving-text {
-        font-size: 4vw; /* Mobilde yazıyı daha küçük yapıyoruz */
-    }
 
-    /* Mobile yazının taşmasını engellemek için hareket mesafesini ayarlıyoruz */
-    @keyframes moveText {
-        0% {
-            transform: translateX(-50%); /* Başlangıçta sola kayma mesafesini küçültüyoruz */
-        }
-        50% {
-            transform: translateX(0); /* Orta noktada kalır */
-        }
-        100% {
-            transform: translateX(50%); /* Sağda bitiş mesafesini küçültüyoruz */
-        }
-    }
-    /* Mobil uyumlu */
+/* Mobil ekranlarda menü öğelerini yatay olarak diz */
 @media (max-width: 768px) {
-    .product {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .product {
+    .menu {
+        display: flex;
+        justify-content: space-between; /* Menü öğelerini yatayda eşit şekilde yayar */
+        align-items: center; /* Yatayda ortalar */
+        flex-direction: row; /* Menü öğeleri yatay sıralanır */
         width: 100%;
     }
+
+    .menu-item {
+        margin: 0 10px; /* Menü öğeleri arasına boşluk ekler */
+    }
 }
 
-}
 /* Ürünler Galerisi */
 .gallery {
     display: flex;
@@ -412,6 +400,7 @@ footer p {
 }
 
 .image-button-container {
+    padding-left: 1rem;
     display: flex;
     align-items: center; /* Resmi ve yazıyı dikeyde ortalar */
     justify-content: center; /* Resmi ve yazıyı yatayda ortalar */
@@ -446,7 +435,10 @@ footer p {
 }
 
 .kitchen-button {
-    padding: 20px;
+    text-decoration: underline;
+    margin-left: -20px;
+    padding-left: -10px;
+    padding: 10px;
     background-color: #333;
     color: white;
     font-size: 1em;
@@ -502,6 +494,7 @@ footer p {
 }
 
 .image-button-container1 {
+    
     display: flex;
     align-items: center; /* Resmi ve yazıyı dikeyde ortalar */
     justify-content: center; /* Resmi ve yazıyı yatayda ortalar */
@@ -512,11 +505,12 @@ footer p {
 }
 
 .image1 {
+    margin-left: 1rem;
     width: 50vw; /* Ekranın yarısı kadar genişlik */
     height: auto; /* Yükseklik oranını korur */
     max-height: 60%; /* Yüksekliği sınırlamak için */
     object-fit: contain; /* Resmi kutuya sığdırırken, boyutunun bozulmamasını sağlar */
-    margin-left: -3%;
+
 }
 
 .text-container1 {
@@ -564,6 +558,8 @@ footer p {
 }
 
 .image2 {
+    padding-left: 2rem;
+    margin-left: 2rem;
     width: 50vw; /* Ekranın yarısı kadar genişlik */
     height: auto; /* Yükseklik oranını korur */
     max-height: 60%; /* Yüksekliği sınırlamak için */
@@ -605,105 +601,180 @@ footer p {
 .kitchen-button2:hover {
     background-color: #5a9; /* Hoverda arka plan rengini değiştirir */
 }
-
-
-
-/* Menü için basit düzenlemeler */
-.navbar {
-    position: relative;
-    z-index: 1000; /* Menü her zaman ön planda olsun */
-    background-color: #333; /* Menü arka plan rengi */
+/* Genel body stilini ayarlayalım */
+body {
+    font-family: Arial, sans-serif; /* Genel yazı tipi */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Tüm öğelerde kutu modelini düzgün ayarlamak */
 }
 
-.menu {
-    display: flex; /* Menü öğelerini yan yana yerleştirir */
-    justify-content: space-between; /* Menü öğeleri arasına boşluk bırakır */
-    padding: 10px 20px; /* Menüye iç boşluk ekler */
-}
+/* Mobil uyumluluk için temel stil */
+@media (max-width: 768px) {
+    /* Tüm içeriklerin boyutlarını düzenle */
+    body {
+        font-size: 16px; /* Font boyutunu küçült */
+    }
 
-.menu-item {
-    color: white; /* Menü öğelerinin rengi */
-    padding: 10px;
-    cursor: pointer;
-}
+    /* Resimler ve içerikler daha küçük olmalı */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.menu-item:hover {
-    background-color: #555; /* Hoverda arka plan rengini değiştir */
-}
-
-/* Menü gizlenmesi için kullanılan sınıf */
-.menu-hidden {
-    display: none; /* Menü öğelerini gizler */
-}
-
-/* Mobilde menü için düzenleme */
-@media screen and (max-width: 768px) {
+    /* Menü için de benzer şekilde esnek ayar */
     .menu {
-        flex-direction: column; /* Menü öğelerini alt alta sıralar */
+        display: flex;
+        flex-direction: column; /* Menüyü dikey yap */
         align-items: center;
+        padding: 0;
     }
 
     .menu-item {
-        padding: 15px;
         width: 100%;
         text-align: center;
+        padding: 10px;
     }
 
-    .menu-hidden {
-        display: block; /* Menüyü mobilde göstermek için */
+    /* Butonlar için de font boyutlarını küçült */
+    .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Diğer öğeler için de benzer düzenlemeler yapabiliriz */
+    .content {
+        padding: 20px;
+        font-size: 14px; /* İçerik yazı boyutunu küçült */
     }
 }
-/* Varsayılan yazı boyutları */
+/* Genel body stilini ayarlayalım */
 body {
+    font-family: Arial, sans-serif; /* Genel yazı tipi */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Tüm öğelerde kutu modelini düzgün ayarlamak */
+}
+
+/* Mobil uyumluluk için temel stil */
+@media (max-width: 768px) {
+    /* Tüm içeriklerin boyutlarını düzenle */
+    body {
+        font-size: 16px; /* Font boyutunu küçült */
+    }
+
+    /* Resimler ve içerikler daha küçük olmalı */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Menü için de benzer şekilde esnek ayar */
+    .menu {
+        display: flex;
+        flex-direction: column; /* Menüyü dikey yap */
+        align-items: center;
+        padding: 0;
+    }
+
+    .menu-item {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Butonlar için de font boyutlarını küçült */
+    .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Diğer öğeler için de benzer düzenlemeler yapabiliriz */
+    .content {
+        padding: 20px;
+        font-size: 14px; /* İçerik yazı boyutunu küçült */
+    }
+}
+/* Mobilde yazı boyutları */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5em; /* Başlıkları küçült */
+    }
+
+    p, span, a {
+        font-size: 1em; /* Paragrafları ve metinleri daha küçük yap */
+    }
+
+    .button {
+        font-size: 14px; /* Buton yazı boyutunu küçült */
+        padding: 10px 15px; /* Butonun içindeki boşluğu ayarla */
+    }
+}
+/* Sayfa içeriği ve düzeni */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Her öğe için esnek genişlikler */
+.item {
+    flex: 1 1 45%; /* Her öğe %45 genişliğe sahip olacak */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Mobilde öğeleri dikey sıralamak */
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 100%; /* Mobilde her öğe tam genişlikte olacak */
+    }
+}
+/* Resimler için uyumlu stil */
+img {
+    width: 100%;  /* Resimler ekran boyutuna göre ayarlanır */
+    height: auto; /* Yükseklik orantılı olarak ayarlanır */
+}
+
+/* Butonlar için esnek stil */
+.button {
+    padding: 15px;
     font-size: 16px;
+    width: auto;
+    max-width: 100%;  /* Butonun genişliği %100'ü geçmez */
+}
+/* Sayfanın sağa ve sola kaymasını engellemek */
+body, html {
+    margin: 0;  /* Sayfanın kenar boşluklarını sıfırlayın */
+    padding: 0; /* Sayfanın iç boşluklarını sıfırlayın */
+    box-sizing: border-box; /* Kutu modelinin düzgün çalışması için */
+    width: 100%; /* Sayfanın genişliğini ekran genişliğine eşit yap */
+    overflow-x: hidden; /* Yatay kaymayı engelle */
 }
 
-h1 {
-    font-size: 2.5rem; /* Başlık boyutu */
+/* Resimler ve tüm öğelerin ekran boyutuna uyumlu olmasını sağlamak */
+img {
+    width: 100%;
+    height: auto; /* Resmin yüksekliği, genişliğiyle orantılı olur */
+    max-width: 100%; /* Resim genişliği ekranı aşmaz */
 }
 
-h2 {
-    font-size: 2rem;
+/* Konteynerlerin genişliğini sınırlamak */
+.container, .item {
+    width: 100%;
+    max-width: 100vw; /* Ekran genişliğini aşmaz */
+    overflow: hidden; /* Taşan içerikleri gizler */
 }
 
-h3 {
-    font-size: 1.5rem;
-}
-
-/* Mobil cihazlar için yazı boyutunu ayarlama */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px; /* Yazıyı biraz küçültüyoruz */
+/* Mobil cihazlar için duyarlı tasarım */
+@media (max-width: 768px) {
+    .container, .item {
+        padding: 10px; /* Konteynerlerin etrafına boşluk ekler */
     }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-}
-
-/* Çok küçük ekranlar için yazı boyutunu daha da küçültme */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 12px; /* Çok küçük ekranlar için yazı boyutu */
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
+    
+    .button {
+        width: 100%;  /* Butonları %100 genişlikte yapar */
+        padding: 10px 20px;
     }
 }
