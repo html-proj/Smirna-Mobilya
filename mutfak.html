@@ -10,18 +10,23 @@
     <link rel="stylesheet" href="styles.css"> <!-- CSS Dosyasını Dahil Et -->
 </head>
 <body>
-    <header>
-    <div class="logo">
-        <span class="logo-letter">S</span>SMiRNA Mobilya
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="tv.html">Tv ünitesi</a></li>
-            <li><a href="#about">Konum</a></li>
-            <li><a href="#contact">İletişim</a></li>
-        </ul>
-    </nav>
+   <header>
+        <div class="logo">
+            <span class="logo-letter">S</span>SMiRNA Mobilya
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="#product">Ürünler</a></li>
+                <li><a href="#about">Konum</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
     </header>
     <!-- Lightbox: Resmi büyük gösteren alan -->
     <div id="lightbox" class="lightbox">
@@ -37,15 +42,15 @@
     </div>
     <!-- Ürünler Galerisi -->
     <center> <h4>  Siz Hayal Edin Biz Gerçekleştirelim!</h4>
-    <div class="blinking-text1">
+    
         <center> Mutfak modelleri</center>
     </div>
     <div class="gallery">
     <!-- Ürün 1 -->
     <div class="product">
-        <img src="resim/resim1.jpg" alt="Mobilya 1" class="product-image">
+        <img src="resim/kt1.jpg" alt="Mobilya 1" class="product-image">
     <div class="product-info">
-        <h3>Beyaz ve ahşap uyumu</h3>
+        <h3>Beyaz ve gri uyumu</h3>
     </div>
     </div>
     <!-- Ürün 2 -->
@@ -71,14 +76,14 @@
         </div>
     <!-- Ürün 5 -->
     <div class="product">
-        <img src="resim/resim8.jpg" alt="Mobilya 4" class="product-image">
+        <img src="resim/resim1.jpg" alt="Mobilya 4" class="product-image">
     <div class="product-info">
         <h3>Beyaz ve gri</h3>
     </div>
     </div>
     <!-- Ürün 6 -->
     <div class="product">
-        <img src="resim/resim9.jpg" alt="Mobilya 4" class="product-image">
+        <img src="resim/resim8.jpg" alt="Mobilya 4" class="product-image">
     <div class="product-info">
         <h3>Beyaz ve gri</h3>
     </div>
