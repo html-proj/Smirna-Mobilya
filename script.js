@@ -185,3 +185,13 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+function copyToClipboard(text) {
+    // Geçici bir input oluşturup, metni kopyalamak için kullanacağız
+    var tempInput = document.createElement("input");
+    document.body.appendChild(tempInput);
+    tempInput.value = text;
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("Kopyalandı: " + text);
+}
